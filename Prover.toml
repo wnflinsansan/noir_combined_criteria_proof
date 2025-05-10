@@ -1,0 +1,30 @@
+# Prover.toml for ZK Combined Eligibility Criteria Proof
+
+# === Private Inputs ===
+user_main_secret = "MainUserSecretAlphaBeta"
+secret_for_criterion_a = "CommunityMemberSecretXYZ" # e.g., a secret only community members know
+private_attribute_for_b = "25" # e.g., user's age is 25
+eligibility_commitment_blinding_factor = "BlindForCombinedEligCommit"
+
+# === Public Inputs ===
+# Criterion A: e.g., prove membership in "TechDAO"
+public_target_criterion_a_id = "HashOfTechDAO_ID" 
+# known_validity_commitment_for_a should be pedersen_hash(["CommunityMemberSecretXYZ", "HashOfTechDAO_ID"])
+# !!! CRITICAL: This is a PLACEHOLDER. Recompute it.
+known_validity_commitment_for_a = "TechDAOMembershipProofCommit..." # PLACEHOLDER - RECOMPUTE
+
+# Criterion B: e.g., age must be >= 21
+public_attribute_threshold_b = "21"
+condition_type_b = "1" # 1 means ">="
+
+session_id = "EventAccessSession_July28"
+overall_eligibility_tag_field = "TAG_FIELD_COMBINED_ELIGIBLE" # e.g., pedersen_hash(["COMBINED_ELIGIBLE"])
+
+# !!! CRITICAL: The hash values below are PLACEHOLDERS.
+# You MUST recompute these using the actual private/public inputs and pedersen_hash logic from src/main.nr.
+
+# claimed_combined_eligibility_commitment = pedersen_hash(["MainUserSecretAlphaBeta", "HashOfTechDAO_ID", "21", "1", "EventAccessSession_July28", "TAG_FIELD_COMBINED_ELIGIBLE", "BlindForCombinedEligCommit"])
+claimed_combined_eligibility_commitment = "CombinedEligCommitValue..." # PLACEHOLDER - RECOMPUTE
+
+# claimed_session_nullifier = pedersen_hash(["MainUserSecretAlphaBeta", "EventAccessSession_July28"])
+claimed_session_nullifier = "SessionNullifierValue..." # PLACEHOLDER - RECOMPUTE

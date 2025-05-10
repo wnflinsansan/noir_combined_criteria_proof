@@ -1,0 +1,16 @@
+# Verifier.toml for ZK Combined Eligibility Criteria Proof
+
+# === Public Inputs ===
+# These MUST match the public inputs in Prover.toml (after recomputation of hashes).
+
+public_target_criterion_a_id = "HashOfTechDAO_ID"
+known_validity_commitment_for_a = "TechDAOMembershipProofCommit..." # PLACEHOLDER - MUST MATCH PROVER'S
+public_attribute_threshold_b = "21"
+condition_type_b = "1"
+session_id = "EventAccessSession_July28"
+overall_eligibility_tag_field = "TAG_FIELD_COMBINED_ELIGIBLE"
+
+# !!! CRITICAL: These hash values are PLACEHOLDERS.
+# Must match recomputed values from Prover.toml.
+claimed_combined_eligibility_commitment = "CombinedEligCommitValue..." # PLACEHOLDER - MUST MATCH PROVER'S
+claimed_session_nullifier = "SessionNullifierValue..." # PLACEHOLDER - MUST MATCH PROVER'S
